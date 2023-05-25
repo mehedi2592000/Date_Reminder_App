@@ -3,6 +3,10 @@ body{
     margin: 25px 50px;
 }
 
+.allprocess{
+    height: 500px;
+    border: 2px solid black;
+}
 .firstline{
     margin-left: 175px;
     color: white;
@@ -91,4 +95,33 @@ body{
 
 #b1,#b2,#b3,#b4{
     font-size: 50px;
+}
+
+
+/* Color change css  */
+
+.rendomColor{
+    
+    
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    margin-right: 50px;
+    
+   
+}
+
+.makebutton{
+
+    width: 190px;
+}
+
+#randomButton{
+    color:white;
+    background-color: black;
+    border: 2px solid red;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 15px;
+    display: block;
 }

@@ -21,14 +21,14 @@ function CountDown()
     let totalHour=Math.floor(totalMin/60);
 
 
-    console.log("total ::"+totalHour+" "+totalMin+" "+totalSecond);
+    // console.log("total ::"+totalHour+" "+totalMin+" "+totalSecond);
 
     let days=Math.floor(totalHour/24);
     let hours=totalHour%24;
     let minyues=totalMin%60;
     let seconds=totalSecond%60;
 
-    console.log("pppppp ::"+totalHour+" "+totalMin+" "+totalSecond)
+    // console.log("pppppp ::"+totalHour+" "+totalMin+" "+totalSecond)
 
 
     day.innerHTML=days;
@@ -42,3 +42,33 @@ function CountDown()
 CountDown();
 
 setInterval(CountDown,1000);
+
+
+
+// background color Change
+
+
+//color change js strt
+
+
+
+const getcolor=()=>{
+
+    const randomnm=Math.floor(Math.random()*16777215);
+
+    const data="#"+randomnm.toString(16);
+    document.getElementById("ppx").style.backgroundColor=data;
+   
+    console.log(randomnm,data);
+
+
+}
+
+
+document.getElementById("randomButton").addEventListener(
+    "click",getcolor
+)
+
+// setInterval(getcolor,1000);
+
+//color change js end
