@@ -72,3 +72,71 @@ document.getElementById("randomButton").addEventListener(
 // setInterval(getcolor,1000);
 
 //color change js end
+
+
+
+// password change start
+
+const uppercase="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const lowercast="abcdefghijklmnopqrstuvwxyz";
+const number="1234567890";
+const symbol="`~!@#$%^&*()_+={}[]";
+
+
+const passbox=document.getElementById("textname");
+const totalchar=document.getElementById("inputcase");
+const upperinput=document.getElementById("uppercase");
+const lowerinput=document.getElementById("lowercase");
+const numberinput=document.getElementById("numbercase");
+const symbolinput=document.getElementById("symbolcase");
+
+
+
+
+const getRenderData=(dataset)=>{
+        return dataset[Math.floor(Math.random()*dataset.length)];
+}
+
+const generatePassword=(pass="")=>{
+
+    if(upperinput.checked)
+    {
+        pass+=getRenderData(uppercase);
+      
+    }
+    if(lowerinput.checked)
+    {
+        pass+=getRenderData(lowercast);
+      
+    }
+    if(numberinput.checked)
+    {
+        pass+=getRenderData(number);
+      
+    }
+    if(symbolinput.checked)
+    {
+        pass+=getRenderData(symbol);
+      
+    }
+
+    if(pass.length<totalchar.value)
+    {
+       return generatePassword(pass);
+    }
+
+
+    passbox.value=pass;
+    console.log("okkk",pass.length,"   ",totalchar.value);
+
+}
+
+document.getElementById("btn").addEventListener(
+    "click",
+    function(){
+        generatePassword();
+    }
+)
+
+
+// generatePassword(); 
